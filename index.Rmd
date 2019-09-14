@@ -1,0 +1,26 @@
+--- 
+title: "Libro sobre genética, bioestadística y R"
+author: ["Jorge Leonardo López Martínez, ... y ..."]
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    #split_by: "section"       # Páginas por secciones (en lugar de capítulos)
+    split_bib: no             # No se muestra bibliografía al final de cada página
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+cover-image: images/cover.png
+github-repo: Leo4Luffy/libro_genetica_R
+description: "Más que un libro es una guia de estudio sobre genética, bioestadística y R."
+---
+
+# ¡Hola! {-}
+
+Más que un libro, este escrito es una pequeña guía de los temas que nos apasionan: la genética, la bioestadística y la programación en R.
+
+Este escrito ha sido creado usando [R Markdown](https://rmarkdown.rstudio.com/) empleando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/). El mismo está disponible en un repositorio [github](https://github.com/Leo4Luffy/libro_genetica_R). 

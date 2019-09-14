@@ -1,0 +1,49 @@
+--- 
+title: "Modelos Mixtos con R"
+author: ["Freddy Hernández Barajas", "Jessica Nathaly Pulzara Mora", "Jorge Leonardo López Martínez"]
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+cover-image: images/cover.png
+github-repo: fhernanb/libro_mod_pred
+description: "Este libro es para ....."
+---
+
+# Prologo {-}
+
+Más que un libro, este escrito es una pequeña guía de los temas que altamente nos apacionan: la genética, la bioestadística y la programación en R.
+
+Este escrito ha sido creado usando [R Markdown](https://rmarkdown.rstudio.com/) empleando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/). El mismo está disponible en el repositorio de [github](https://github.com/Leo4Luffy/libro_genetica_R). 
+
+<!--chapter:end:index.Rmd-->
+
+--- 
+title: "Modelos Mixtos con R"
+author: ["Freddy Hernández Barajas", "Jessica Nathaly Pulzara Mora", "Jorge Leonardo López Martínez"]
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+cover-image: images/cover.png
+github-repo: fhernanb/libro_mod_pred
+description: "Este libro es para ....."
+---
+
+# Prologo {-}
+
+Más que un libro, este escrito es una pequeña guía de los temas que altamente nos apacionan: la genética, la bioestadística y la programación en R.
+
+Este escrito ha sido creado usando [R Markdown](https://rmarkdown.rstudio.com/) empleando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/). El mismo está disponible en el repositorio de [github](https://github.com/Leo4Luffy/libro_genetica_R). 
+
+<!--chapter:end:index.Rmd-->
+
+
+<!--chapter:end:libro_genetica_R.Rmd-->
+
