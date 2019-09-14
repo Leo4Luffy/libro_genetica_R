@@ -21,6 +21,11 @@ description: "Más que un libro es una guia de estudio sobre genética, bioestad
 
 # ¡Hola! {-}
 
-Más que un libro, este escrito es una pequeña guía de los temas que nos apasionan: la genética, la bioestadística y la programación en R.
+```{r echo=FALSE, out.width = '50%', fig.align = 'center'}
+knitr::include_graphics("Imagenes/ADN_programador.gif")
+```
 
-Este escrito ha sido creado usando [R Markdown](https://rmarkdown.rstudio.com/) empleando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/). El mismo está disponible en un repositorio [github](https://github.com/Leo4Luffy/libro_genetica_R). 
+Más que un libro, este escrito es una pequeña guía de los temas que nos apasionan: la genética, la bioestadística y la programación en `R`.
+
+Este escrito ha sido creado usando [R Markdown](https://rmarkdown.rstudio.com/) empleando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/). El mismo está disponible en un [repositorio github](https://github.com/Leo4Luffy/libro_genetica_R).
+
