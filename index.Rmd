@@ -20,6 +20,13 @@ description: "Más que un libro es una guia de estudio sobre genética, bioestad
 ---
 
 # ¡Hola! {-}
+<!---->
+<div style="-moz-box-shadow: 1px 1px 3px 2px #ff0000;
+  -webkit-box-shadow: 1px 1px 3px 2px #ff0000;
+  box-shadow:         1px 1px 3px 2px #ff0000;">
+> <i class="fa fa-bomb"></i>
+Este escrito esta en fase de elaboración.
+</div>
 
 ```{r echo=FALSE, out.width = '50%', fig.align = 'center'}
 knitr::include_graphics("Imagenes/ADN_programador.gif")
@@ -29,7 +36,7 @@ Más que un libro, este escrito es una pequeña guía de los temas que nos apasi
 
 Este escrito ha sido creado usando [R Markdown](https://rmarkdown.rstudio.com/) empleando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/). El mismo está disponible en un [repositorio github](https://github.com/Leo4Luffy/libro_genetica_R).
 
-A lo largo del escrito se usaran bloques informativos para resaltar aspectos importantes del mismo. Un ejemplo de dichos bloques se describen a continuación:
+A lo largo del escrito se usaran bloques informativos para resaltar aspectos importantes, como por ejemplo ejercicios propuestos en cada uno de los capitulos abordados. Dichos bloques se describen a continuación:
 
 <!-- 
 Los colores del bloque estan aqui: https://www.color-hex.com/color/00ffff

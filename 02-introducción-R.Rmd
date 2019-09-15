@@ -1,0 +1,7 @@
+# ¿Qué es R? {#R}
+
+## Lalalala
+
+```{r Los creadores, echo = FALSE, out.width = '30%', fig.align = 'center', fig.cap = 'Los creadores del Software R Robert Gentleman y Ross Ihaka.'}
+knitr::include_graphics("Imagenes/Creadores.jpg")
+```
