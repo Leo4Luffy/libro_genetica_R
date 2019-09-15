@@ -29,3 +29,23 @@ Más que un libro, este escrito es una pequeña guía de los temas que nos apasi
 
 Este escrito ha sido creado usando [R Markdown](https://rmarkdown.rstudio.com/) empleando el paquete [`bookdown`](https://bookdown.org/yihui/bookdown/). El mismo está disponible en un [repositorio github](https://github.com/Leo4Luffy/libro_genetica_R).
 
+A lo largo del escrito se usaran bloques informativos para resaltar aspectos importantes del mismo. Un ejemplo de dichos bloques se describen a continuación:
+
+<!-- 
+Los colores del bloque estan aqui: https://www.color-hex.com/color/00ffff
+Y los iconos aquí: https://fontawesome.com/icons?d=gallery
+-->
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #cccccc;
+  -webkit-box-shadow: 1px 1px 3px 2px #cccccc;
+  box-shadow:         1px 1px 3px 2px #cccccc;">
+> <i class="fa fa-paperclip"></i>
+Este es un bloque de aclaración.
+</div>
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #ffff00;
+  -webkit-box-shadow: 1px 1px 3px 2px #ffff00;
+  box-shadow:         1px 1px 3px 2px #ffff00;">
+> <i class="fa fa-pencil"></i>
+Este es un bloque de ejercicios propuestos.
+</div>

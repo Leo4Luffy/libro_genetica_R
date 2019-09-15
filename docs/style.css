@@ -1,0 +1,15 @@
+.rmdcomment {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #ffff7f;
+  position:relative;
+}
+
+.rmdcomment:before {
+    content: "\f5ae";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    top:0px;
+    font-size: 45px;
+ }
