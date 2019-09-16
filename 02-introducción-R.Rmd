@@ -1,7 +1,31 @@
-# ¿Qué es R? {#R}
+# El software `R` {#R}
 
-## Lalalala
+## ¿Qué es `R`?
 
-```{r Los creadores, echo = FALSE, out.width = '30%', fig.align = 'center', fig.cap = 'Los creadores del Software R Robert Gentleman y Ross Ihaka.'}
+`R` es un lenguaje de programación creado por Robert Gentleman y Ross Ihaka en el año de 1992. Su intención consistio en hacer un lenguaje didáctico, para ser utilizado en un curso introductorio a la estadística en la Universidad de Nueva Zelanda. Ambos creadores le dieron el nombre de `R` al lenguaje implementado por las iniciales de sus nombres (a modo de broma).
+
+```{r Los creadores, echo = FALSE, out.width = '30%', fig.align = 'center', fig.cap = 'Los creadores del Software R **Robert Gentleman** (a la derecha) y **Ross Ihaka** (a la izquierda).'}
 knitr::include_graphics("Imagenes/Creadores.jpg")
 ```
+
+El lenguaje de programación `R` se puede obtener y distribuir de forma gratuita, debido a que se encuentra bajo Licencia Pública General del proyecto GNU<sup>1</sup>. `R` es un programa de código abierto, gratis, y fruto del esfuerzo de miles de personas en todo el mundo que colaboran en su desarrollo.
+
+```{r Encuentro R, echo = FALSE, out.width = '30%', fig.align = 'center', fig.cap = 'Encuentro en el useR! 2019. Este evento,  realizado anualmente en todo el mundo, se considera como la principal reunión del lenguaje `R`.'}
+knitr::include_graphics("Imagenes/Encuentro_R.jpg")
+```
+
+Esta última característica del `R` (el contar con una comunidad) es muy importante, puesto que la misma permite la solución de problemas de errores en programación (*bugs*), así como el desarrollo de paquetes modulares utilizados en temas específicos, desarrollados por personas con conocimiento variado en alguna parte del mundo.
+
+En la [web](https://www.r-project.org/index.html) hay todo tipo de información de interés acerca del `R`, como por ejemplo su instalación a través de la CRAN (Comprehensive R Archive Network).
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+> <i class="fa fa-paperclip"></i>
+<sup>1</sup>El proyecto **GNU** tuvo como propósito desarrollar un sistema operativo compatible con Unix que fuera software libre. Si desea conocer información sobre el mismo, consulte [aquí](http://www.gnu.org/) por favor.
+</div>
+
+## ¿Reproducibilidad?
+
+
+

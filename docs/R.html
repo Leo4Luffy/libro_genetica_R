@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 ¿Qué es R? | Libro sobre genética, bioestadística y R</title>
+  <title>Capítulo 2 El software R | Libro sobre genética, bioestadística y R</title>
   <meta name="description" content="Más que un libro es una guia de estudio sobre genética, bioestadística y R." />
   <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 ¿Qué es R? | Libro sobre genética, bioestadística y R" />
+  <meta property="og:title" content="Capítulo 2 El software R | Libro sobre genética, bioestadística y R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Leo4Luffy/libro_genetica_R" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 ¿Qué es R? | Libro sobre genética, bioestadística y R" />
+  <meta name="twitter:title" content="Capítulo 2 El software R | Libro sobre genética, bioestadística y R" />
   
   <meta name="twitter:description" content="Más que un libro es una guia de estudio sobre genética, bioestadística y R." />
   <meta name="twitter:image" content="images/cover.png" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jorge Leonardo López Martínez, … y …" />
 
 
-<meta name="date" content="2019-09-15" />
+<meta name="date" content="2019-09-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="intro.html"/>
-<link rel="next" href="prologo.html"/>
+
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -68,12 +68,13 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>¡Hola!</a></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introducción</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#section"><i class="fa fa-check"></i><b>1.1</b> </a></li>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#quienes-somos-nosotros"><i class="fa fa-check"></i><b>1.1</b> ¿Quienes somos nosotros?</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#que-puedes-encontrar-en-este-libro"><i class="fa fa-check"></i><b>1.2</b> ¿Qué puedes encontrar en este libro?</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>2</b> ¿Qué es R?</a><ul>
-<li class="chapter" data-level="2.1" data-path="R.html"><a href="R.html#lalalala"><i class="fa fa-check"></i><b>2.1</b> Lalalala</a></li>
+<li class="chapter" data-level="2" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>2</b> El software <code>R</code></a><ul>
+<li class="chapter" data-level="2.1" data-path="R.html"><a href="R.html#que-es-r"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es <code>R</code>?</a></li>
+<li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#reproducibilidad"><i class="fa fa-check"></i><b>2.2</b> ¿Reproducibilidad?</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="prologo.html"><a href="prologo.html"><i class="fa fa-check"></i>Prologo</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
 
@@ -95,15 +96,36 @@
 
             <section class="normal" id="section-">
 <div id="R" class="section level1">
-<h1><span class="header-section-number">Capítulo 2</span> ¿Qué es R?</h1>
-<div id="lalalala" class="section level2">
-<h2><span class="header-section-number">2.1</span> Lalalala</h2>
+<h1><span class="header-section-number">Capítulo 2</span> El software <code>R</code></h1>
+<div id="que-es-r" class="section level2">
+<h2><span class="header-section-number">2.1</span> ¿Qué es <code>R</code>?</h2>
+<p><code>R</code> es un lenguaje de programación creado por Robert Gentleman y Ross Ihaka en el año de 1992. Su intención consistio en hacer un lenguaje didáctico, para ser utilizado en un curso introductorio a la estadística en la Universidad de Nueva Zelanda. Ambos creadores le dieron el nombre de <code>R</code> al lenguaje implementado por las iniciales de sus nombres (a modo de broma).</p>
 <div class="figure" style="text-align: center">
-<img src="Imagenes/Creadores.jpg" alt="Los creadores del Software R Robert Gentleman y Ross Ihaka." width="30%" />
+<img src="Imagenes/Creadores.jpg" alt="Los creadores del Software R **Robert Gentleman** (a la derecha) y **Ross Ihaka** (a la izquierda)." width="30%" />
 <p class="caption">
-(#fig:Los creadores)Los creadores del Software R Robert Gentleman y Ross Ihaka.
+(#fig:Los creadores)Los creadores del Software R <strong>Robert Gentleman</strong> (a la derecha) y <strong>Ross Ihaka</strong> (a la izquierda).
 </p>
 </div>
+<p>El lenguaje de programación <code>R</code> se puede obtener y distribuir de forma gratuita, debido a que se encuentra bajo Licencia Pública General del proyecto GNU<sup>1</sup>. <code>R</code> es un programa de código abierto, gratis, y fruto del esfuerzo de miles de personas en todo el mundo que colaboran en su desarrollo.</p>
+<div class="figure" style="text-align: center">
+<img src="Imagenes/Encuentro_R.jpg" alt="Encuentro en el useR! 2019. Este evento,  realizado anualmente en todo el mundo, se considera como la principal reunión del lenguaje `R`." width="30%" />
+<p class="caption">
+(#fig:Encuentro R)Encuentro en el useR! 2019. Este evento, realizado anualmente en todo el mundo, se considera como la principal reunión del lenguaje <code>R</code>.
+</p>
+</div>
+<p>Esta última característica del <code>R</code> (el contar con una comunidad) es muy importante, puesto que la misma permite la solución de problemas de errores en programación (<em>bugs</em>), así como el desarrollo de paquetes modulares utilizados en temas específicos, desarrollados por personas con conocimiento variado en alguna parte del mundo.</p>
+<p>En la <a href="https://www.r-project.org/index.html">web</a> hay todo tipo de información de interés acerca del <code>R</code>, como por ejemplo su instalación a través de la CRAN (Comprehensive R Archive Network).</p>
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+<blockquote>
+<p><i class="fa fa-paperclip"></i>
+<sup>1</sup>El proyecto <strong>GNU</strong> tuvo como propósito desarrollar un sistema operativo compatible con Unix que fuera software libre. Si desea conocer información sobre el mismo, consulte <a href="http://www.gnu.org/">aquí</a> por favor.</p>
+</blockquote>
+</div>
+</div>
+<div id="reproducibilidad" class="section level2">
+<h2><span class="header-section-number">2.2</span> ¿Reproducibilidad?</h2>
 
 </div>
 </div>
@@ -112,8 +134,8 @@
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="prologo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
