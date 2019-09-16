@@ -1,4 +1,5 @@
 book_filename: 'libro_genetica_R'
+repo: https://github.com/Leo4Luffy/libro_genetica_R
 output_dir: docs
 new_session: no
 language:

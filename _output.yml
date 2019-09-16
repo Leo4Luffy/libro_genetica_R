@@ -7,6 +7,10 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con bookdown</a></li>
     edit: https://github.com/Leo4Luffy/libro_genetica_R/edit/master/%s      # Si se publica con GitHub Pages...
+    sharing:
+      github: yes
+      facebook: no
+      twitter: no
     download: "pdf"                                                         # Link de descarga en pdf
 bookdown::pdf_book:
   includes:

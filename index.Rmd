@@ -43,11 +43,11 @@ Los colores del bloque estan aqui: https://www.color-hex.com/color/00ffff
 Y los iconos aquí: https://fontawesome.com/icons?d=gallery
 -->
 
-<div style="-moz-box-shadow: 1px 1px 3px 2px #cccccc;
-  -webkit-box-shadow: 1px 1px 3px 2px #cccccc;
-  box-shadow:         1px 1px 3px 2px #cccccc;">
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
 > <i class="fa fa-paperclip"></i>
-Este es un bloque de aclaración.
+Este es un bloque de información.
 </div>
 
 <div style="-moz-box-shadow: 1px 1px 3px 2px #ffff00;
