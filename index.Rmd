@@ -21,12 +21,17 @@ description: "Más que un libro es una guia de estudio sobre genética, bioestad
 
 # ¡Hola! {-}
 <!---->
+
 <div style="-moz-box-shadow: 1px 1px 3px 2px #ff0000;
   -webkit-box-shadow: 1px 1px 3px 2px #ff0000;
   box-shadow:         1px 1px 3px 2px #ff0000;">
 > <i class="fa fa-bomb"></i>
 Este escrito esta en fase de elaboración.
 </div>
+
+```{r Figura 1.2, echo = FALSE, out.width = '30%', fig.align = 'center'}
+knitr::include_graphics("Imagenes/Elaborando.jpeg")
+```
 
 ```{r echo=FALSE, out.width = '50%', fig.align = 'center'}
 knitr::include_graphics("Imagenes/ADN_programador.gif")
@@ -43,6 +48,21 @@ Los colores del bloque estan aqui: https://www.color-hex.com/color/00ffff
 Y los iconos aquí: https://fontawesome.com/icons?d=gallery
 -->
 
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+<div class="col2">
+
 <div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
   -webkit-box-shadow: 1px 1px 3px 2px #000000;
   box-shadow:         1px 1px 3px 2px #000000;">
@@ -55,4 +75,6 @@ Este es un bloque de información.
   box-shadow:         1px 1px 3px 2px #ffff00;">
 > <i class="fa fa-pencil"></i>
 Este es un bloque de ejercicios propuestos.
+</div>
+
 </div>

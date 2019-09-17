@@ -24,7 +24,7 @@
 <meta name="author" content="Jorge Leonardo López Martínez, … y …" />
 
 
-<meta name="date" content="2019-09-16" />
+<meta name="date" content="2019-09-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,13 +33,13 @@
   
 <link rel="prev" href="intro.html"/>
 
-<script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
-<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="book_assets/jquery/jquery.min.js"></script>
+<link href="book_assets/gitbook/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook/css/plugin-fontsettings.css" rel="stylesheet" />
 
 
 
@@ -73,8 +73,9 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>2</b> El software <code>R</code></a><ul>
 <li class="chapter" data-level="2.1" data-path="R.html"><a href="R.html#que-es-r"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es <code>R</code>?</a></li>
-<li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#informes-reproducibles"><i class="fa fa-check"></i><b>2.2</b> Informes reproducibles</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="R.html"><a href="R.html#informes-reproducibles-con-r-markdown"><i class="fa fa-check"></i><b>2.2.1</b> Informes reproducibles con <code>R Markdown</code></a></li>
+<li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#usando-r-lo-basico"><i class="fa fa-check"></i><b>2.2</b> Usando <code>R</code>: lo básico</a></li>
+<li class="chapter" data-level="2.3" data-path="R.html"><a href="R.html#informes-reproducibles"><i class="fa fa-check"></i><b>2.3</b> Informes reproducibles</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="R.html"><a href="R.html#informes-reproducibles-con-r-markdown"><i class="fa fa-check"></i><b>2.3.1</b> Informes reproducibles con <code>R Markdown</code></a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -126,11 +127,56 @@
 </blockquote>
 </div>
 </div>
+<div id="usando-r-lo-basico" class="section level2">
+<h2><span class="header-section-number">2.2</span> Usando <code>R</code>: lo básico</h2>
+<!--
+Si rara vez ha usado `R` o nunca antes, a continuación brindaremos información suficiente para poder comenzar y comprender el código `R` que se usara en gran parte de este escrito.
+-->
+<!--
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+
+<div class="col2">
+
+```
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+```
+
+```
+##                 mpg cyl  disp  hp drat    wt qsec vs am gear carb
+## Porsche 914-2  26.0   4 120.3  91 4.43 2.140 16.7  0  1    5    2
+## Lotus Europa   30.4   4  95.1 113 3.77 1.513 16.9  1  1    5    2
+## Ford Pantera L 15.8   8 351.0 264 4.22 3.170 14.5  0  1    5    4
+## Ferrari Dino   19.7   6 145.0 175 3.62 2.770 15.5  0  1    5    6
+## Maserati Bora  15.0   8 301.0 335 3.54 3.570 14.6  0  1    5    8
+## Volvo 142E     21.4   4 121.0 109 4.11 2.780 18.6  1  1    4    2
+```
+</div>
+-->
+<p><img src="libro_genetica_R_files/figure-html/fig-nocap-margin-first-1.png" width="384" /></p>
+</div>
 <div id="informes-reproducibles" class="section level2">
-<h2><span class="header-section-number">2.2</span> Informes reproducibles</h2>
-<p>Hoy en día es posible crear informes que, además de contener el texto que compone el manuscrito, contiene tanto el codigó que genera las figuras como los estadísticos. En esto consiste un <strong>informe reproducible</strong>, y esta característica (texto, codigó y estadísticos) es lo que los hace diferente a cualquier otro documento.</p>
+<h2><span class="header-section-number">2.3</span> Informes reproducibles</h2>
+<p>Hoy en día es posible crear informes que, además de contener el texto que compone el manuscrito, contiene tanto el código que genera las figuras como los estadísticos. En esto consiste un <strong>informe reproducible</strong>, y esta característica (texto, código y estadísticos) es lo que los hace diferente a cualquier otro documento.</p>
 <div class="figure" style="text-align: center">
-<img src="Imagenes/R_markdown_2.jpeg" alt="." width="30%" />
+<img src="Imagenes/R_markdown_2.jpeg" alt="." width="40%" />
 <p class="caption">
 (#fig:Figura 1.3).
 </p>
@@ -142,9 +188,9 @@
 <li><p>Brinda a las personas interesadas la posibilidad de acceder a su información, y a los diferentes enfoques y análisis que intentó antes de llegar a sus resultados finales.</p></li>
 </ul>
 <div id="informes-reproducibles-con-r-markdown" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Informes reproducibles con <code>R Markdown</code></h3>
+<h3><span class="header-section-number">2.3.1</span> Informes reproducibles con <code>R Markdown</code></h3>
 <div class="figure" style="text-align: center">
-<img src="Imagenes/R_markdown_3.jpeg" alt="." width="30%" />
+<img src="Imagenes/R_markdown_3.jpeg" alt="." width="60%" />
 <p class="caption">
 (#fig:Figura 1.4).
 </p>
@@ -162,13 +208,13 @@
 
     </div>
   </div>
-<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook/js/app.min.js"></script>
+<script src="book_assets/gitbook/js/lunr.js"></script>
+<script src="book_assets/gitbook/js/plugin-search.js"></script>
+<script src="book_assets/gitbook/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook/js/jquery.highlight.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({

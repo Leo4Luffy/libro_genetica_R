@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Libro sobre genética, bioestadística y R</title>
+  <title>Capítulo 3 lala | Libro sobre genética, bioestadística y R</title>
   <meta name="description" content="Más que un libro es una guia de estudio sobre genética, bioestadística y R." />
   <meta name="generator" content="bookdown 0.13 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Libro sobre genética, bioestadística y R" />
+  <meta property="og:title" content="Capítulo 3 lala | Libro sobre genética, bioestadística y R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/cover.png" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="Leo4Luffy/libro_genetica_R" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Libro sobre genética, bioestadística y R" />
+  <meta name="twitter:title" content="Capítulo 3 lala | Libro sobre genética, bioestadística y R" />
   
   <meta name="twitter:description" content="Más que un libro es una guia de estudio sobre genética, bioestadística y R." />
   <meta name="twitter:image" content="images/cover.png" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="R.html"/>
 
-<link rel="next" href="intro.html"/>
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -73,9 +73,10 @@
 </ul></li>
 <li class="chapter" data-level="2" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>2</b> El software <code>R</code></a><ul>
 <li class="chapter" data-level="2.1" data-path="R.html"><a href="R.html#que-es-r"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es <code>R</code>?</a></li>
-<li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#usando-r-lo-basico"><i class="fa fa-check"></i><b>2.2</b> Usando <code>R</code>: lo básico</a></li>
-<li class="chapter" data-level="2.3" data-path="R.html"><a href="R.html#informes-reproducibles"><i class="fa fa-check"></i><b>2.3</b> Informes reproducibles</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="R.html"><a href="R.html#informes-reproducibles-con-r-markdown"><i class="fa fa-check"></i><b>2.3.1</b> Informes reproducibles con <code>R Markdown</code></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lala.html"><a href="lala.html"><i class="fa fa-check"></i><b>3</b> lala</a><ul>
+<li class="chapter" data-level="3.1" data-path="lala.html"><a href="lala.html#informes-reproducibles"><i class="fa fa-check"></i><b>3.1</b> Informes reproducibles</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="lala.html"><a href="lala.html#informes-reproducibles-con-r-markdown"><i class="fa fa-check"></i><b>3.1.1</b> Informes reproducibles con <code>R Markdown</code></a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -98,70 +99,43 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Libro sobre genética, bioestadística y R</h1>
-<p class="author"><em>Jorge Leonardo López Martínez, … y …</em></p>
-<p class="date"><em>2019-09-17</em></p>
+<div id="lala" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> lala</h1>
+<p>Si rara vez ha usado <code>R</code> o nunca antes, a continuación le brindaremos información suficiente para poder comenzar y comprender el código <code>R</code> que se usara en gran parte del escrito.</p>
+<div id="informes-reproducibles" class="section level2">
+<h2><span class="header-section-number">3.1</span> Informes reproducibles</h2>
+<p>Hoy en día es posible crear informes que, además de contener el texto que compone el manuscrito, contiene tanto el código que genera las figuras como los estadísticos. En esto consiste un <strong>informe reproducible</strong>, y esta característica (texto, código y estadísticos) es lo que los hace diferente a cualquier otro documento.</p>
+<div class="figure" style="text-align: center">
+<img src="Imagenes/R_markdown_2.jpeg" alt="." width="40%" />
+<p class="caption">
+(#fig:Figura 1.3).
+</p>
 </div>
-<div id="hola" class="section level1 unnumbered">
-<h1>¡Hola!</h1>
-<!---->
-<div style="-moz-box-shadow: 1px 1px 3px 2px #ff0000;
-  -webkit-box-shadow: 1px 1px 3px 2px #ff0000;
-  box-shadow:         1px 1px 3px 2px #ff0000;">
-<blockquote>
-<p><i class="fa fa-bomb"></i>
-Este escrito esta en fase de elaboración.</p>
-</blockquote>
-</div>
-<p><img src="Imagenes/Elaborando.jpeg" width="30%" style="display: block; margin: auto;" /></p>
-<p><img src="Imagenes/ADN_programador.gif" width="50%" style="display: block; margin: auto;" /></p>
-<p>Más que un libro, este escrito es una pequeña guía de los temas que nos apasionan: la genética, la bioestadística y la programación en <code>R</code>.</p>
-<p>Este escrito ha sido creado usando <a href="https://rmarkdown.rstudio.com/">R Markdown</a> empleando el paquete <a href="https://bookdown.org/yihui/bookdown/"><code>bookdown</code></a>. El mismo está disponible en un <a href="https://github.com/Leo4Luffy/libro_genetica_R">repositorio github</a>.</p>
-<p>A lo largo del escrito se usaran bloques informativos para resaltar aspectos importantes, como por ejemplo ejercicios propuestos en cada uno de los capitulos abordados. Dichos bloques se describen a continuación:</p>
-<!-- 
-Los colores del bloque estan aqui: https://www.color-hex.com/color/00ffff
-Y los iconos aquí: https://fontawesome.com/icons?d=gallery
--->
-<style>
-  .col2 {
-    columns: 2 200px;         /* number of columns and width in pixels*/
-    -webkit-columns: 2 200px; /* chrome, safari */
-    -moz-columns: 2 200px;    /* firefox */
-  }
-  .col3 {
-    columns: 3 100px;
-    -webkit-columns: 3 100px;
-    -moz-columns: 3 100px;
-  }
-</style>
-<div class="col2">
-<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
-  -webkit-box-shadow: 1px 1px 3px 2px #000000;
-  box-shadow:         1px 1px 3px 2px #000000;">
-<blockquote>
-<p><i class="fa fa-paperclip"></i>
-Este es un bloque de información.</p>
-</blockquote>
-</div>
-<div style="-moz-box-shadow: 1px 1px 3px 2px #ffff00;
-  -webkit-box-shadow: 1px 1px 3px 2px #ffff00;
-  box-shadow:         1px 1px 3px 2px #ffff00;">
-<blockquote>
-<p><i class="fa fa-pencil"></i>
-Este es un bloque de ejercicios propuestos.</p>
-</blockquote>
-</div>
+<p>Escribir un informe reproducible tiene numerosas virtudes, como por ejemplo:</p>
+<ul>
+<li><p>Aumenta la transparencia de su ciencia al automatizar la forma en como se generan sus figuras y estadísticos, y al compartir sus datos;</p></li>
+<li><p>Ayuda a mantener sincroizados sus resultados y los modelos utilizados;</p></li>
+<li><p>Brinda a las personas interesadas la posibilidad de acceder a su información, y a los diferentes enfoques y análisis que intentó antes de llegar a sus resultados finales.</p></li>
+</ul>
+<div id="informes-reproducibles-con-r-markdown" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Informes reproducibles con <code>R Markdown</code></h3>
+<div class="figure" style="text-align: center">
+<img src="Imagenes/R_markdown_3.jpeg" alt="." width="60%" />
+<p class="caption">
+(#fig:Figura 1.4).
+</p>
 </div>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="R.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
@@ -191,7 +165,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/Leo4Luffy/libro_genetica_R/edit/master/index.Rmd",
+"link": "https://github.com/Leo4Luffy/libro_genetica_R/edit/master/02-introducción-R.Rmd",
 "text": "Edit"
 },
 "history": {
