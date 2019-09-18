@@ -2,13 +2,20 @@
 
 ## ¿Qué es `R`?
 
-`R` es un lenguaje de programación creado por Robert Gentleman y Ross Ihaka en el año de 1992. Su intención consistio en hacer un lenguaje didáctico, para ser utilizado en un curso introductorio a la estadística en la Universidad de Nueva Zelanda. Ambos creadores le dieron el nombre de `R` al lenguaje implementado por las iniciales de sus nombres (a modo de broma).
+`R` es un lenguaje de programación creado por **Robert Gentleman** y **Ross Ihaka** en el año de 1992. Su intención consistio en hacer un lenguaje didáctico, para ser utilizado en un curso introductorio a la estadística en la Universidad de Nueva Zelanda. Ambos creadores le dieron el nombre de `R` al lenguaje implementado por las iniciales de sus nombres (a modo de broma).
 
-```{r Figura 1.1, echo = FALSE, out.width = '30%', fig.align = 'center', fig.cap = 'Los creadores del Software R **Robert Gentleman** (a la derecha) y **Ross Ihaka** (a la izquierda).'}
+```{r Figura 1.1, echo = FALSE, out.width = '30%', fig.align = 'center', fig.cap = 'Los creadores del Software R Robert Gentleman (a la derecha) y Ross Ihaka (a la izquierda).'}
 knitr::include_graphics("Imagenes/Creadores.jpg")
 ```
 
-El lenguaje de programación `R` se puede obtener y distribuir de forma gratuita, debido a que se encuentra bajo Licencia Pública General del proyecto GNU<sup>1</sup>. `R` es un programa de código abierto, gratis, y fruto del esfuerzo de miles de personas en todo el mundo que colaboran en su desarrollo.
+El lenguaje de programación `R` se puede obtener y distribuir de forma gratuita, debido a que se encuentra bajo Licencia Pública General del proyecto GNU. `R` es un programa de código abierto, gratis, y fruto del esfuerzo de miles de personas en todo el mundo que colaboran en su desarrollo.
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+> <i class="fa fa-paperclip"></i>
+<sup>El proyecto **GNU** tuvo como propósito desarrollar un sistema operativo compatible con Unix que fuera software libre. Si desea conocer información sobre el mismo, consulte [aquí](http://www.gnu.org/) por favor.
+</div>
 
 ```{r Figura 1.2, echo = FALSE, out.width = '30%', fig.align = 'center', fig.cap = 'Encuentro en el **useR!** 2019. Este evento,  realizado anualmente en todo el mundo, se considera como la principal reunión del lenguaje `R`.'}
 knitr::include_graphics("Imagenes/Encuentro_R.jpg")
@@ -18,17 +25,93 @@ De hecho esta última característica del `R` es muy importante, puesto que al c
 
 En la [web](https://www.r-project.org/index.html) hay todo tipo de información de interés acerca del `R`, como por ejemplo su instalación a través de la CRAN (Comprehensive R Archive Network).
 
-<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
-  -webkit-box-shadow: 1px 1px 3px 2px #000000;
-  box-shadow:         1px 1px 3px 2px #000000;">
-> <i class="fa fa-paperclip"></i>
-<sup>1</sup>El proyecto **GNU** tuvo como propósito desarrollar un sistema operativo compatible con Unix que fuera software libre. Si desea conocer información sobre el mismo, consulte [aquí](http://www.gnu.org/) por favor.
-</div>
-
 ## Usando `R`: lo básico
 <!--
 Si rara vez ha usado `R` o nunca antes, a continuación brindaremos información suficiente para poder comenzar y comprender el código `R` que se usara en gran parte de este escrito.
 -->
+
+Si alguna vez ha leido sobre el `R`, se habra dado cuenta que una característica importante del mismo es que es un lenguaje de programación **orientado a objetos**.
+
+Los objetos son cosas, como un número, un conjunto de datos, una palabra, un resumen estadístico (como una media o varianza), entre otros. Que sea orientada a objetos quiere decir que `R` realiza acciones sobre esos objetos, como por ejemplo operaciones matemáticas.
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+> <i class="fa fa-paperclip"></i>
+<sup>Objeto **<-** [   ], esta es la forma de crear objetos en `R`. También se puede usar **=** para asignar (**<-**) un elemento a un objeto; sin embargo es común en `R` usar **<-**.
+</div>
+
+Los objetos en `R` vienen en muchas formas y tamaños, desde objetos simples como escalares (que representan números unicos) hasta vectores (que representan varios números) u objetos más complejos como conjuntos de datos. Estos a su vez pueden ser de varios tipos diferentes, como numericos o caracteres.
+
+Hagamos dos objetos simples, el primero es un objeto de tipo carácter, y el otro es de tipo numérico:
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+<div class="col2">
+
+```{r Cromosomas, echo = TRUE, eval = TRUE, message = FALSE}
+Cromosomas <- c('Humano', 'Cerdo', 'Perro', 'Vaca')
+
+print(Cromosomas)
+```
+
+```{r Número de cromosomas por especie, echo = TRUE, eval = TRUE, message = FALSE}
+Num_cromosomas <- c(46, 38, 39, 60)
+
+print(Num_cromosomas)
+```
+
+</div>
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+> <i class="fa fa-paperclip"></i>
+<sup>
+Para crear un objeto con palabras o caracteres, basta con encerrar la cadena de caracteres dentro de comillas simples (**' '**) o dobles (**" "**).
+</div>
+
+Miremos detalladamente el resultado anterior: 46, 38, 39 y 60 corresponde al contenido de "Num_cromosomas", mientras que Humano, Cerdo, Perro y Vacas es claramente el contenido de "Cromosomas". El hash doble (##) es la forma en como el `R` le indica que lo mostrado es una salida y no un código. [1] es la posición (o número de fila) del elemento dentro del objeto o vector creado.
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+> <i class="fa fa-paperclip"></i>
+<sup>El número de cromosomas es constate en cada especie, por ejemplo en el cerdo hay 38 cromosomas: 18 pares homólogos y un par de cromosomas sexuales.
+</div>
+
+Es importante tener en cuenta el tipo de un objeto, ya que esto determinará lo que se puede hacer con el mismo. Por ejemplo, no es posible realizar procedimiento matemáticos con un objeto de tipo carácter. Para averiguar el tipo de un objeto, se puede usar la función `class`. Por ejemplo:
+
+```{r Clase, echo = TRUE, eval = TRUE, message = FALSE}
+class(Cromosomas)
+```
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+> <i class="fa fa-paperclip"></i>
+<sup> `R` gira en torno a dos cosas: objetos y funciones. Casi todo en `R` es un objeto o una función.
+</div>
+
+Lo anterior es otra de las características importante del lenguaje de programación en `R`: es **fuertemente tipado**. Esto quiere decir que `R` no permite tratar a un objeto como si fuera de un tipo distinto al que tiene. Para ello, es necesario convertir de forma explícita dicho objeto al nuevo tipo previamente.
+
+<div style="-moz-box-shadow: 1px 1px 3px 2px #ffff00;
+  -webkit-box-shadow: 1px 1px 3px 2px #ffff00;
+  box-shadow:         1px 1px 3px 2px #ffff00;">
+> <i class="fa fa-pencil"></i>
+.
+</div>
 
 ## Informes reproducibles
 
