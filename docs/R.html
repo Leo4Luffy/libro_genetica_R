@@ -137,6 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.1" data-path="R.html"><a href="R.html#que-es-r"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es <code>R</code>?</a></li>
 <li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#usando-r-lo-basico"><i class="fa fa-check"></i><b>2.2</b> Usando <code>R</code>: lo básico</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="R.html"><a href="R.html#algunos-tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>2.2.1</b> Algunos tipos de objetos en <code>R</code></a></li>
+<li class="chapter" data-level="2.2.2" data-path="R.html"><a href="R.html#elaboracion-de-graficas"><i class="fa fa-check"></i><b>2.2.2</b> Elaboración de gráficas</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="R.html"><a href="R.html#informes-reproducibles"><i class="fa fa-check"></i><b>2.3</b> Informes reproducibles</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="R.html"><a href="R.html#informes-reproducibles-con-r-markdown"><i class="fa fa-check"></i><b>2.3.1</b> Informes reproducibles con <code>R Markdown</code></a></li>
@@ -183,7 +184,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 </div>
 <div class="figure" style="text-align: center">
-<img src="Imagenes/Encuentro_R.jpg" alt="Encuentro en el **useR!** 2019. Este evento,  realizado anualmente en todo el mundo, se considera como la principal reunión del lenguaje `R`." width="30%" />
+<img src="Imagenes/Encuentro_R.jpg" alt="Encuentro en el **useR!** 2019. Este evento,  realizado anualmente en todo el mundo, se considera como la principal reunión del lenguaje `R`." width="40%" />
 <p class="caption">
 (#fig:Figura 1.2)Encuentro en el <strong>useR!</strong> 2019. Este evento, realizado anualmente en todo el mundo, se considera como la principal reunión del lenguaje <code>R</code>.
 </p>
@@ -313,22 +314,90 @@ Para crear un objeto con palabras o caracteres, basta con encerrar la cadena de 
 <sup>La función <code>str()</code> permite saber el tipo de dato de cada columna en un conjunto de datos. <strong>¡Por favor!</strong> intente averiguar el tipo de datos del conjunto de datos anteriormente creado.</p>
 </blockquote>
 </div>
+<details>
+<p><summary>
+De click aquí por favor para dar con la solución:
+</summary></p>
 <div style="-moz-box-shadow: 1px 1px 3px 2px #ff0000;
   -webkit-box-shadow: 1px 1px 3px 2px #ff0000;
   box-shadow:         1px 1px 3px 2px #ff0000;">
 <blockquote>
-<p><i class="fa fa-magic"></i>
+<p><i class="fa fa-clipboard"></i>
 <sup><strong>Solución</strong>:</p>
 </blockquote>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">Base_datos &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
 <a class="sourceLine" id="cb11-2" data-line-number="2">  <span class="st">&#39;Especies&#39;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;Humano&#39;</span>, <span class="st">&#39;Cerdo&#39;</span>, <span class="st">&#39;Perro&#39;</span>, <span class="st">&#39;Vaca&#39;</span>),</a>
 <a class="sourceLine" id="cb11-3" data-line-number="3">  <span class="st">&#39;Cromosomas&#39;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">46</span>, <span class="dv">38</span>, <span class="dv">39</span>, <span class="dv">60</span>)</a>
-<a class="sourceLine" id="cb11-4" data-line-number="4">) <span class="co"># La base de datos se encapsula en un objeto de nombre &quot;Base_datos&quot;</span></a>
+<a class="sourceLine" id="cb11-4" data-line-number="4">)</a>
 <a class="sourceLine" id="cb11-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="kw">str</span>(Base_datos) <span class="co"># La variable Especies dentro del objeto &quot;Base_datos&quot; es un factor, mientras que Cromosomas corresponde a tipo numérico.</span></a></code></pre></div>
+<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="kw">str</span>(Base_datos)</a></code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    4 obs. of  2 variables:
 ##  $ Especies  : Factor w/ 4 levels &quot;Cerdo&quot;,&quot;Humano&quot;,..: 2 1 3 4
 ##  $ Cromosomas: num  46 38 39 60</code></pre>
+<blockquote>
+<p><sup>La variable Especies dentro del objeto “Base_datos” es un <strong>factor</strong>, mientras que Cromosomas corresponde a tipo <strong>numérico</strong>.</p>
+</blockquote>
+</div>
+</details>
+<p><br></p>
+<p>Luego, es posible extraer una parte de la base de datos anterior usando el signo dolar (<strong>$</strong>):</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">Cromosomas &lt;-<span class="st"> </span>Base_datos<span class="op">$</span>Cromosomas</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">Cromosomas</a></code></pre></div>
+<pre><code>## [1] 46 38 39 60</code></pre>
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+<blockquote>
+<p><i class="fa fa-paperclip"></i>
+<sup> El signo dolar (<strong>$</strong>) se llama selector de componentes, y básicamente extrae una parte parte de un objeto.</p>
+</blockquote>
+</div>
+<p>O bien, usando subíndices (denotados con llaves cuadradas (<strong>[ ]</strong>)). Mediante este último es posibe seleccionar no solo columnas de bases de datos (como se hizo usando <strong>$</strong>), sino que también filas y valores individuales. Veamos un ejemplo de su uso:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">Base_datos[<span class="dv">2</span>, <span class="dv">2</span>]</a></code></pre></div>
+<pre><code>## [1] 38</code></pre>
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+<blockquote>
+<p><i class="fa fa-paperclip"></i>
+<sup> Cada base de datos tiene una dirección capturada por su número de fila y columna. Tomando esto como base, es posible decirle al <code>R</code> que encuentre una parte de un objeto colocando el número de la fila y el número de la columna, ambos entre corchetes y separados por una coma (<strong>,</strong>).</p>
+</blockquote>
+</div>
+</div>
+<div id="elaboracion-de-graficas" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Elaboración de gráficas</h3>
+<p>Como ya hemos visto, <code>R</code> es un entorno especialmente diseñado para el tratamiento de datos. También para el <strong>desarrollo gráfico</strong>. De hecho una de las grandes virtudes del lenguaje de programación en <code>R</code> es la facilidad que ofrece el mismo para presentar la información correspondiente a los datos, de una manera gráfica.</p>
+<p><code>R</code> dispone de varias funciones preparadas para la representación gráfica de los datos. Estas funciones se dividen en dos grandes grupos:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Gráficos de alto nivel</strong>, los cuales crean un nuevo gráfico en la ventana de gráficos;</p></li>
+<li><p><strong>Gráficos de bajo nivel</strong>, los cuales permiten añadir componentes (como líneas, puntos y etiquetas) a un gráfico ya existente.</p></li>
+</ol>
+<p>Aquí nos conformaremos en elaborar un simple gráfico de barras usando la función <code>barplot()</code>:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1">Base_datos_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2">  <span class="st">&#39;Genotipo&#39;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;AA&#39;</span>, <span class="st">&#39;AA&#39;</span>, <span class="st">&#39;Aa&#39;</span>, <span class="st">&#39;aa&#39;</span>, <span class="st">&#39;AA&#39;</span>, <span class="st">&#39;Aa&#39;</span>, <span class="st">&#39;Aa&#39;</span>, <span class="st">&#39;aa&#39;</span>, <span class="st">&#39;aa&#39;</span>, <span class="st">&#39;AA&#39;</span>, <span class="st">&#39;Aa&#39;</span>, <span class="st">&#39;Aa&#39;</span>, <span class="st">&#39;aa&#39;</span>, <span class="st">&#39;AA&#39;</span>, <span class="st">&#39;AA&#39;</span>, <span class="st">&#39;Aa&#39;</span>)</a>
+<a class="sourceLine" id="cb17-3" data-line-number="3">)</a>
+<a class="sourceLine" id="cb17-4" data-line-number="4">Conteo &lt;-<span class="st"> </span><span class="kw">table</span>(Base_datos_<span class="dv">2</span><span class="op">$</span>Genotipo)</a>
+<a class="sourceLine" id="cb17-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb17-6" data-line-number="6"><span class="kw">barplot</span>(Conteo, </a>
+<a class="sourceLine" id="cb17-7" data-line-number="7">        <span class="dt">main =</span> <span class="st">&#39;Genotipos presentes en una pequeña población&#39;, </span></a>
+<a class="sourceLine" id="cb17-8" data-line-number="8"><span class="st">        xlab = &#39;</span>Genotipos<span class="st">&#39;, </span></a>
+<a class="sourceLine" id="cb17-9" data-line-number="9"><span class="st">        ylab = &#39;</span>Total de individuos<span class="st">&#39;)</span></a></code></pre></div>
+<p><img src="libro_genetica_R_files/figure-html/Graficaci%C3%B3n%201-1.png" width="672" /></p>
+<p>El argumento base del anterior gráfico es el nombre del vector que ira en el eje horizontal (<strong>x</strong>). Utilizando algunos argumentos adicionales, se puede mejorar la apariencia de la gráfica: con <strong>xlab</strong> y <strong>ylab</strong> se crean los títulos de ambos ejes y con <strong>main</strong> se puede definir un título principal.</p>
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+<blockquote>
+<p><i class="fa fa-paperclip"></i>
+<sup> La mayoría de las funciones de graficación tienen gran cantidad de argumentos adicionales que puede usar para personalizar su gráfica. Para verlos todos puede ejecutar <code>?par</code> en su consola de <code>R</code>.</p>
+</blockquote>
+</div>
+<p>Tenga en cuenta que la mayor parte de las gráficas presentadas en este escrito seran realizadas utilizando el paquete <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>. Recomendamos enormemente su uso dado que dicho paquete permite realizar gráficas que además de ser bonitas, son fáciles de hacer.</p>
+<div class="figure" style="text-align: center">
+<img src="Imagenes/ggplot2.jpg" alt="**ggplot2** es un sistema para crear gráficos, basado en la [gramática de los gráficos](https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/ref=as_li_ss_tl?ie=UTF8&amp;qid=1477928463&amp;sr=8-1&amp;keywords=the+grammar+of+graphics&amp;linkCode=sl1&amp;tag=ggplot2-20&amp;linkId=f0130e557161b83fbe97ba0e9175c431)." width="40%" />
+<p class="caption">
+(#fig:Figura 1.4)<strong>ggplot2</strong> es un sistema para crear gráficos, basado en la <a href="https://www.amazon.com/Grammar-Graphics-Statistics-Computing/dp/0387245448/ref=as_li_ss_tl?ie=UTF8&amp;qid=1477928463&amp;sr=8-1&amp;keywords=the+grammar+of+graphics&amp;linkCode=sl1&amp;tag=ggplot2-20&amp;linkId=f0130e557161b83fbe97ba0e9175c431">gramática de los gráficos</a>.
+</p>
 </div>
 </div>
 </div>
@@ -338,7 +407,7 @@ Para crear un objeto con palabras o caracteres, basta con encerrar la cadena de 
 <div class="figure" style="text-align: center">
 <img src="Imagenes/R_markdown_2.jpeg" alt="." width="40%" />
 <p class="caption">
-(#fig:Figura 1.4).
+(#fig:Figura 1.5).
 </p>
 </div>
 <p>Escribir un informe reproducible tiene numerosas virtudes, como por ejemplo:</p>
@@ -352,7 +421,7 @@ Para crear un objeto con palabras o caracteres, basta con encerrar la cadena de 
 <div class="figure" style="text-align: center">
 <img src="Imagenes/R_markdown_3.jpeg" alt="." width="60%" />
 <p class="caption">
-(#fig:Figura 1.5).
+(#fig:Figura 1.6).
 </p>
 </div>
 
