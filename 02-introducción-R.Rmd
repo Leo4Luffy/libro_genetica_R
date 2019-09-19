@@ -281,11 +281,61 @@ knitr::include_graphics("Imagenes/ggplot2.jpg")
 
 ## Informes reproducibles
 
-Hoy en día es posible crear informes que, además de contener el texto que compone el manuscrito, contiene tanto el código que genera las figuras como los estadísticos. En esto consiste un **informe reproducible**, y esta característica (texto, código y estadísticos) es lo que los hace diferente a cualquier otro documento.
+Hoy en día es posible crear informes que, además de contener texto, contiene tanto el código que genera las figuras como los estadísticos. En esto consiste un **informe reproducible**, y esta característica (texto, código y estadísticos) es lo que los hace diferente a cualquier otro documento.
 
-```{r Figura 1.5, echo = FALSE, out.width = '40%', fig.align = 'center', fig.cap = '.'}
+```{r Fuentes, echo = FALSE, eval = TRUE, message = FALSE}
 
-knitr::include_graphics("Imagenes/R_markdown_2.jpeg")
+library(showtext) # Link donde estan las fuentes Google (http://www.google.com/fonts)
+font_add_google('Gochi Hand', 'gochi')
+font_add_google('Schoolbell', 'bell')
+font_add_google('Rock Salt', 'rock')
+showtext_auto()
+```
+
+```{r Figura 1.5, eval = TRUE, echo = FALSE, out.width = '60%', fig.align = 'center', fig.showtext = TRUE, message = FALSE, fig.cap = 'Ejemplo visual de lo que es un informe reproducible.'}
+
+Reproducible <- data.frame(
+  x = c(1:8), y = c(1:8)
+) %>%
+  ggplot(aes(x, y)) +
+  geom_blank() +
+  annotate(geom = 'text', 4.7, 7.2, label = 'Informe reproducible', family = 'rock', size = 16.4, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 6.4, yend = 6.4, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 6.2, yend = 6.2, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 6.0, yend = 6.0, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 5.8, yend = 5.8, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 5.6, yend = 5.6, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 5.4, yend = 5.4, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 5.2, yend = 5.2, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 5.0, yend = 5.0, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 4.8, yend = 4.8, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 4.6, yend = 4.6, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 4.4, yend = 4.4, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 4.2, yend = 4.2, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 4.0, yend = 4.0, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 3.8, yend = 3.8, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 3.6, yend = 3.6, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 3.4, yend = 3.4, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 3.2, yend = 3.2, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 5.0, y = 3.0, yend = 3.0, colour = 'black') +
+  annotate(geom = 'rect', xmin = 5.5, xmax = 6.0, ymin = 3.0, ymax = 4.5, colour = 'yellow', fill = 'yellow', alpha = 0.4) +
+  annotate(geom = 'rect', xmin = 6.2, xmax = 6.7, ymin = 3.0, ymax = 5.0, colour = 'gray54', fill = 'gray54', alpha = 0.4) +
+  annotate(geom = 'rect', xmin = 6.9, xmax = 7.4, ymin = 3.0, ymax = 4.2, colour = 'cyan', fill = 'cyan', alpha = 0.4) +
+  annotate(geom = 'text', 5.8, 6.0, label = '```{r }', family = 'gochi', size = 12.4, colour = 'black') +
+  annotate(geom = 'text', 5.7, 5.5, label = '```', family = 'gochi', size = 12.4, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 7.4, y = 2.8, yend = 2.8, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 7.4, y = 2.6, yend = 2.6, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 7.4, y = 2.4, yend = 2.4, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 7.4, y = 2.2, yend = 2.2, colour = 'black') +
+  annotate(geom = 'segment', x = 2.0, xend = 7.4, y = 2.0, yend = 2.0, colour = 'black') +
+  scale_y_continuous(limits = c(2.0, 7.2)) +
+  scale_x_continuous(limits = c(1.5, 8.0)) +
+  theme_void() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank())
+
+Reproducible
 ```
 
 Escribir un informe reproducible tiene numerosas virtudes, como por ejemplo:
