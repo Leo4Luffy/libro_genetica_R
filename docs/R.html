@@ -24,7 +24,7 @@
 <meta name="author" content="Jorge Leonardo López Martínez, … y …" />
 
 
-<meta name="date" content="2019-09-18" />
+<meta name="date" content="2019-09-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -135,7 +135,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>2</b> El software <code>R</code></a><ul>
 <li class="chapter" data-level="2.1" data-path="R.html"><a href="R.html#que-es-r"><i class="fa fa-check"></i><b>2.1</b> ¿Qué es <code>R</code>?</a></li>
-<li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#usando-r-lo-basico"><i class="fa fa-check"></i><b>2.2</b> Usando <code>R</code>: lo básico</a></li>
+<li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#usando-r-lo-basico"><i class="fa fa-check"></i><b>2.2</b> Usando <code>R</code>: lo básico</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="R.html"><a href="R.html#algunos-tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>2.2.1</b> Algunos tipos de objetos en <code>R</code></a></li>
+</ul></li>
 <li class="chapter" data-level="2.3" data-path="R.html"><a href="R.html#informes-reproducibles"><i class="fa fa-check"></i><b>2.3</b> Informes reproducibles</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="R.html"><a href="R.html#informes-reproducibles-con-r-markdown"><i class="fa fa-check"></i><b>2.3.1</b> Informes reproducibles con <code>R Markdown</code></a></li>
 </ul></li>
@@ -195,7 +197,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Si rara vez ha usado `R` o nunca antes, a continuación brindaremos información suficiente para poder comenzar y comprender el código `R` que se usara en gran parte de este escrito.
 -->
 <p>Si alguna vez ha leido sobre el <code>R</code>, se habra dado cuenta que una característica importante del mismo es que es un lenguaje de programación <strong>orientado a objetos</strong>.</p>
-<p>Los objetos son cosas, como un número, un conjunto de datos, una palabra, un resumen estadístico (como una media o varianza), entre otros. Que sea orientada a objetos quiere decir que <code>R</code> realiza acciones sobre esos objetos, como por ejemplo operaciones matemáticas.</p>
+<p>Los objetos son cosas, como un número, un conjunto de datos, una palabra, un resumen estadístico (como una media o varianza), entre otros. Que sea orientada a objetos quiere decir que <code>R</code> realiza acciones sobre esos objetos.</p>
+<div id="algunos-tipos-de-objetos-en-r" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Algunos tipos de objetos en <code>R</code></h3>
+<div class="figure" style="text-align: center">
+<img src="libro_genetica_R_files/figure-html/Figura%201.3-1.png" alt="Los objetos en `R` vienen en muchas formas y tamaños, desde objetos simples como escalares (a la izquierda) hasta vectores (al centro) u objetos más complejos como conjuntos de datos (a la derecha)." width="50%" />
+<p class="caption">
+(#fig:Figura 1.3)Los objetos en <code>R</code> vienen en muchas formas y tamaños, desde objetos simples como escalares (a la izquierda) hasta vectores (al centro) u objetos más complejos como conjuntos de datos (a la derecha).
+</p>
+</div>
+<ul>
+<li><strong>Escalares y vectores</strong></li>
+</ul>
+<p>Los <strong>escalares</strong> y los <strong>vectores</strong> son el objeto más simple en <code>R</code>. Un objeto escalar es solo un único valor, mientras que los vectores corresponden a una combinación de varios escalares almacenados como un solo objeto. Hagamos dos objetos para ver esta diferencia:</p>
 <div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
   -webkit-box-shadow: 1px 1px 3px 2px #000000;
   box-shadow:         1px 1px 3px 2px #000000;">
@@ -204,8 +218,7 @@ Si rara vez ha usado `R` o nunca antes, a continuación brindaremos información
 <sup>Objeto <strong>&lt;-</strong> [ ], esta es la forma de crear objetos en <code>R</code>. También se puede usar <strong>=</strong> para asignar (<strong>&lt;-</strong>) un elemento a un objeto; sin embargo es común en <code>R</code> usar <strong>&lt;-</strong>.</p>
 </blockquote>
 </div>
-<p>Los objetos en <code>R</code> vienen en muchas formas y tamaños, desde objetos simples como escalares (que representan números unicos) hasta vectores (que representan varios números) u objetos más complejos como conjuntos de datos. Estos a su vez pueden ser de varios tipos diferentes, como numericos o caracteres.</p>
-<p>Hagamos dos objetos simples, el primero es un objeto de tipo carácter, y el otro es de tipo numérico:</p>
+<!--
 <style>
   .col2 {
     columns: 2 200px;         /* number of columns and width in pixels*/
@@ -218,16 +231,17 @@ Si rara vez ha usado `R` o nunca antes, a continuación brindaremos información
     -moz-columns: 3 100px;
   }
 </style>
+
 <div class="col2">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">Cromosomas &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;Humano&#39;</span>, <span class="st">&#39;Cerdo&#39;</span>, <span class="st">&#39;Perro&#39;</span>, <span class="st">&#39;Vaca&#39;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">print</span>(Cromosomas)</a></code></pre></div>
-<pre><code>## [1] &quot;Humano&quot; &quot;Cerdo&quot;  &quot;Perro&quot;  &quot;Vaca&quot;</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">Num_cromosomas &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">46</span>, <span class="dv">38</span>, <span class="dv">39</span>, <span class="dv">60</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw">print</span>(Num_cromosomas)</a></code></pre></div>
-<pre><code>## [1] 46 38 39 60</code></pre>
+
 </div>
+-->
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">Escalar &lt;-<span class="st"> &#39;Humano&#39;</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">print</span>(Escalar)</a></code></pre></div>
+<pre><code>## [1] &quot;Humano&quot;</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">Vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">46</span>, <span class="dv">38</span>, <span class="dv">39</span>, <span class="dv">60</span>)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">print</span>(Vector)</a></code></pre></div>
+<pre><code>## [1] 46 38 39 60</code></pre>
 <div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
   -webkit-box-shadow: 1px 1px 3px 2px #000000;
   box-shadow:         1px 1px 3px 2px #000000;">
@@ -237,34 +251,85 @@ Si rara vez ha usado `R` o nunca antes, a continuación brindaremos información
 Para crear un objeto con palabras o caracteres, basta con encerrar la cadena de caracteres dentro de comillas simples (<strong>’ ’</strong>) o dobles (<strong>&quot; &quot;</strong>).</p>
 </blockquote>
 </div>
-<p>Miremos detalladamente el resultado anterior: 46, 38, 39 y 60 corresponde al contenido de “Num_cromosomas”, mientras que Humano, Cerdo, Perro y Vacas es claramente el contenido de “Cromosomas”. El hash doble (##) es la forma en como el <code>R</code> le indica que lo mostrado es una salida y no un código. [1] es la posición (o número de fila) del elemento dentro del objeto o vector creado.</p>
+<p>Miremos detalladamente el resultado anterior: Humano corresponde al contenido de “Escalar”, mientras que 46, 38, 39 y 60 es claramente el contenido de “Vector”. El hash doble (##) es la forma en como el <code>R</code> le indica que lo mostrado es una salida y no un código. [1] es la posición (o número de fila) del elemento dentro del objeto.</p>
+<p>Es importante tener en cuenta el tipo de un objeto, ya que esto determinará lo que se puede hacer con el mismo. Por ejemplo, no es posible realizar procedimientos matemáticos con un objeto de tipo carácter. Para averiguar el tipo de un objeto, se puede usar la función <code>class</code>. Por ejemplo:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">class</span>(Vector)</a></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
 <div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
   -webkit-box-shadow: 1px 1px 3px 2px #000000;
   box-shadow:         1px 1px 3px 2px #000000;">
 <blockquote>
 <p><i class="fa fa-paperclip"></i>
-<sup>El número de cromosomas es constate en cada especie, por ejemplo en el cerdo hay 38 cromosomas: 18 pares homólogos y un par de cromosomas sexuales.</p>
-</blockquote>
-</div>
-<p>Es importante tener en cuenta el tipo de un objeto, ya que esto determinará lo que se puede hacer con el mismo. Por ejemplo, no es posible realizar procedimiento matemáticos con un objeto de tipo carácter. Para averiguar el tipo de un objeto, se puede usar la función <code>class</code>. Por ejemplo:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">class</span>(Cromosomas)</a></code></pre></div>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
-  -webkit-box-shadow: 1px 1px 3px 2px #000000;
-  box-shadow:         1px 1px 3px 2px #000000;">
-<blockquote>
-<p><i class="fa fa-paperclip"></i>
-<sup> <code>R</code> gira en torno a dos cosas: objetos y funciones. Casi todo en <code>R</code> es un objeto o una función.</p>
+<sup> <code>R</code> gira en torno a dos cosas: objetos y funciones. Casi todo en <code>R</code> es un objeto o una función. De hecho, ya hemos visto dos funciones: <code>class()</code> y <code>c()</code>… <code>c()</code> es la forma más sencilla en <code>R</code> de crear un vector.</p>
 </blockquote>
 </div>
 <p>Lo anterior es otra de las características importante del lenguaje de programación en <code>R</code>: es <strong>fuertemente tipado</strong>. Esto quiere decir que <code>R</code> no permite tratar a un objeto como si fuera de un tipo distinto al que tiene. Para ello, es necesario convertir de forma explícita dicho objeto al nuevo tipo previamente.</p>
+<ul>
+<li><strong>Matrices y conjuntos de datos</strong></li>
+</ul>
+<p>Las <strong>matrices</strong> y los <strong>conjuntos de datos</strong> son la extensión natural de los vectores. De hecho, se puede pensar en ello como una combinación de varios vectores. Veamos un ejemplo de una matriz:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">Especies &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;Humano&#39;</span>, <span class="st">&#39;Cerdo&#39;</span>, <span class="st">&#39;Perro&#39;</span>, <span class="st">&#39;Vaca&#39;</span>)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">Cromosomas &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">46</span>, <span class="dv">38</span>, <span class="dv">39</span>, <span class="dv">60</span>)</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw">cbind</span>(Especies, Cromosomas)</a></code></pre></div>
+<pre><code>##      Especies Cromosomas
+## [1,] &quot;Humano&quot; &quot;46&quot;      
+## [2,] &quot;Cerdo&quot;  &quot;38&quot;      
+## [3,] &quot;Perro&quot;  &quot;39&quot;      
+## [4,] &quot;Vaca&quot;   &quot;60&quot;</code></pre>
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+<blockquote>
+<p><i class="fa fa-paperclip"></i>
+<sup> Con la función <code>cbind()</code> se puede crear una matriz combinando vectores. Aquí se combinan los vetores “Especies” y “Cromosomas”… claramente se puede observar que el número de cromosomas en cada especie puede variar, por ejemplo en el cerdo hay 38 cromosomas: 18 pares homólogos y un par de cromosomas sexuales.</p>
+</blockquote>
+</div>
+<p>Si bien las matrices y los conjuntos de datos son muy similares, no son exactemente lo mismo. Las matrices pueden contener un solo tipo de datos (ya sea numérico o carácter), mientras los conjuntos de datos pueden contener columnas tanto numéricas como de caracteres. De hecho podra observar en el ejemplo anterior, que los elementos dentro de la columna Cromosomas, <code>R</code> los encerro dentro de comillas dobles (<strong>&quot; &quot;</strong>).</p>
+<p>Creemos un conjuntos de datos:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">  <span class="st">&#39;Especies&#39;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;Humano&#39;</span>, <span class="st">&#39;Cerdo&#39;</span>, <span class="st">&#39;Perro&#39;</span>, <span class="st">&#39;Vaca&#39;</span>),</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">  <span class="st">&#39;Cromosomas&#39;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">46</span>, <span class="dv">38</span>, <span class="dv">39</span>, <span class="dv">60</span>)</a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">)</a></code></pre></div>
+<pre><code>##   Especies Cromosomas
+## 1   Humano         46
+## 2    Cerdo         38
+## 3    Perro         39
+## 4     Vaca         60</code></pre>
+<div style="-moz-box-shadow: 1px 1px 3px 2px #000000;
+  -webkit-box-shadow: 1px 1px 3px 2px #000000;
+  box-shadow:         1px 1px 3px 2px #000000;">
+<blockquote>
+<p><i class="fa fa-paperclip"></i>
+<sup> La función <code>data.frame()</code> es muy similar a <code>cbind()</code>. La única diferencia es que con la primera función se debe especificar los nombres para cada una de las columnas a medida que las define.</p>
+</blockquote>
+</div>
+<p>Al ser tan flexibles, la mayoría de los datos en el mundo real tienden a almacenarse como conjuntos de datos.</p>
 <div style="-moz-box-shadow: 1px 1px 3px 2px #ffff00;
   -webkit-box-shadow: 1px 1px 3px 2px #ffff00;
   box-shadow:         1px 1px 3px 2px #ffff00;">
 <blockquote>
 <p><i class="fa fa-pencil"></i>
-.</p>
+<sup>La función <code>str()</code> permite saber el tipo de dato de cada columna en un conjunto de datos. <strong>¡Por favor!</strong> intente averiguar el tipo de datos del conjunto de datos anteriormente creado.</p>
 </blockquote>
+</div>
+<div style="-moz-box-shadow: 1px 1px 3px 2px #ff0000;
+  -webkit-box-shadow: 1px 1px 3px 2px #ff0000;
+  box-shadow:         1px 1px 3px 2px #ff0000;">
+<blockquote>
+<p><i class="fa fa-magic"></i>
+<sup><strong>Solución</strong>:</p>
+</blockquote>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">Base_datos &lt;-<span class="st"> </span><span class="kw">data.frame</span>(</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">  <span class="st">&#39;Especies&#39;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&#39;Humano&#39;</span>, <span class="st">&#39;Cerdo&#39;</span>, <span class="st">&#39;Perro&#39;</span>, <span class="st">&#39;Vaca&#39;</span>),</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">  <span class="st">&#39;Cromosomas&#39;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">46</span>, <span class="dv">38</span>, <span class="dv">39</span>, <span class="dv">60</span>)</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4">) <span class="co"># La base de datos se encapsula en un objeto de nombre &quot;Base_datos&quot;</span></a>
+<a class="sourceLine" id="cb11-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb11-6" data-line-number="6"><span class="kw">str</span>(Base_datos) <span class="co"># La variable Especies dentro del objeto &quot;Base_datos&quot; es un factor, mientras que Cromosomas corresponde a tipo numérico.</span></a></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    4 obs. of  2 variables:
+##  $ Especies  : Factor w/ 4 levels &quot;Cerdo&quot;,&quot;Humano&quot;,..: 2 1 3 4
+##  $ Cromosomas: num  46 38 39 60</code></pre>
+</div>
 </div>
 </div>
 <div id="informes-reproducibles" class="section level2">
@@ -273,7 +338,7 @@ Para crear un objeto con palabras o caracteres, basta con encerrar la cadena de 
 <div class="figure" style="text-align: center">
 <img src="Imagenes/R_markdown_2.jpeg" alt="." width="40%" />
 <p class="caption">
-(#fig:Figura 1.3).
+(#fig:Figura 1.4).
 </p>
 </div>
 <p>Escribir un informe reproducible tiene numerosas virtudes, como por ejemplo:</p>
@@ -287,7 +352,7 @@ Para crear un objeto con palabras o caracteres, basta con encerrar la cadena de 
 <div class="figure" style="text-align: center">
 <img src="Imagenes/R_markdown_3.jpeg" alt="." width="60%" />
 <p class="caption">
-(#fig:Figura 1.4).
+(#fig:Figura 1.5).
 </p>
 </div>
 
