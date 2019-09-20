@@ -2,5 +2,24 @@
 
 ## ¿Quienes somos nosotros?
 
-## ¿Qué puedes encontrar en este libro?
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+</style>
+
+<div class="col2">
+
+Mi nombre es [Jorge Leonardo López Martínez](https://leo4luffy.github.io/). Soy una persona apasionada por la genética, la bioestadística y los lenjuajes de programación. 
+
+```{r Figura 1.2, echo = FALSE, out.width = '40%'}
+
+knitr::include_graphics("Imagenes/Leo.jpg")
+```
+
+</div>
+
+## ¿Qué puedes encontrar en este escrito?
 

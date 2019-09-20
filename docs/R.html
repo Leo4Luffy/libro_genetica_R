@@ -138,6 +138,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="R.html"><a href="R.html#usando-r-lo-basico"><i class="fa fa-check"></i><b>2.2</b> Usando <code>R</code>: lo básico</a><ul>
 <li class="chapter" data-level="2.2.1" data-path="R.html"><a href="R.html#algunos-tipos-de-objetos-en-r"><i class="fa fa-check"></i><b>2.2.1</b> Algunos tipos de objetos en <code>R</code></a></li>
 <li class="chapter" data-level="2.2.2" data-path="R.html"><a href="R.html#elaboracion-de-graficas"><i class="fa fa-check"></i><b>2.2.2</b> Elaboración de gráficas</a></li>
+<li class="chapter" data-level="2.2.3" data-path="R.html"><a href="R.html#paquetes"><i class="fa fa-check"></i><b>2.2.3</b> Paquetes</a></li>
 </ul></li>
 <li class="chapter" data-level="2.3" data-path="R.html"><a href="R.html#informes-reproducibles"><i class="fa fa-check"></i><b>2.3</b> Informes reproducibles</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="R.html"><a href="R.html#informes-reproducibles-con-r-markdown"><i class="fa fa-check"></i><b>2.3.1</b> Informes reproducibles con <code>R Markdown</code></a></li>
@@ -202,9 +203,9 @@ Si rara vez ha usado `R` o nunca antes, a continuación brindaremos información
 <div id="algunos-tipos-de-objetos-en-r" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> Algunos tipos de objetos en <code>R</code></h3>
 <div class="figure" style="text-align: center">
-<img src="libro_genetica_R_files/figure-html/Figura%201.3-1.png" alt="Los objetos en `R` vienen en muchas formas y tamaños, desde objetos simples como escalares (a la izquierda) hasta vectores (al centro) u objetos más complejos como conjuntos de datos (a la derecha)." width="50%" />
+<img src="libro_genetica_R_files/figure-html/Figura%201.3-1.png" alt="Los objetos en `R` vienen en muchas formas y tamaños, desde objetos simples como escalares (a la izquierda) hasta vectores (al centro) u objetos más complejos como matrices o conjuntos de datos (a la derecha)." width="50%" />
 <p class="caption">
-(#fig:Figura 1.3)Los objetos en <code>R</code> vienen en muchas formas y tamaños, desde objetos simples como escalares (a la izquierda) hasta vectores (al centro) u objetos más complejos como conjuntos de datos (a la derecha).
+(#fig:Figura 1.3)Los objetos en <code>R</code> vienen en muchas formas y tamaños, desde objetos simples como escalares (a la izquierda) hasta vectores (al centro) u objetos más complejos como matrices o conjuntos de datos (a la derecha).
 </p>
 </div>
 <ul>
@@ -400,6 +401,10 @@ De click aquí por favor para dar con la solución:
 </p>
 </div>
 </div>
+<div id="paquetes" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Paquetes</h3>
+<p>La funcionalidad del lenguaje de programación <code>R</code> consta de paquetes modulares. El sistema base de <code>R</code> contiene el paquete básico que se requiere para su ejecución. Por otra parte, la comunidad <code>R</code> a desarrollado un sin número de otros paquetes, que son complementos especializados para temas específicos, basados a menudo en métodos muy innovadores que permiten utilizar el <code>R</code> para una amplia gama de problemas. <a href="https://cran.r-project.org/">Aquí</a> podra ver una lista de los paquetes disponibles en el CRAN. Los mismos son diversos: existen paquetes para procesar datos de encuestas, series de tiempo, <strong>secuencias genéticas</strong> o información económica, así como paquetes para implementar una gran variedad de métodos estadísticos.</p>
+</div>
 </div>
 <div id="informes-reproducibles" class="section level2">
 <h2><span class="header-section-number">2.3</span> Informes reproducibles</h2>
@@ -420,11 +425,19 @@ De click aquí por favor para dar con la solución:
 <div id="informes-reproducibles-con-r-markdown" class="section level3">
 <h3><span class="header-section-number">2.3.1</span> Informes reproducibles con <code>R Markdown</code></h3>
 <div class="figure" style="text-align: center">
-<img src="Imagenes/R_markdown_3.jpeg" alt="." width="50%" />
+<img src="Imagenes/R_markdown_3.jpeg" alt="Forma creativa de lo que hace `R Markdown`." width="50%" />
 <p class="caption">
-(#fig:Figura 1.6).
+(#fig:Figura 1.6)Forma creativa de lo que hace <code>R Markdown</code>.
 </p>
 </div>
+<p>Los lenguajes de programación utilizados por los investigadores generalmente cuentan con paquetes que se pueden usar para generar informes reproducibles. En <code>R</code>, se suele usar el paquete <code>R Markdown</code> para generar dichos informes. Dicho paquete automatiza el proceso de elaboración de un informe reproducible en varios pasos:</p>
+<div class="figure" style="text-align: center">
+<img src="libro_genetica_R_files/figure-html/Figuras%201.7-1.png" alt="Proceso `R Markdown` para la elaboración de un informe reproducible." width="60%" />
+<p class="caption">
+(#fig:Figuras 1.7)Proceso <code>R Markdown</code> para la elaboración de un informe reproducible.
+</p>
+</div>
+<p><code>R Markdown</code> llama al paquete <code>knitr</code> para convertir un archivo <strong>.Rmd</strong> en un archivo markdown (<strong>.md</strong>). En este proceso, <code>knitr</code> toma los fragmentos de código (denominados <em>chunk</em>) y los ejecuta a través de <code>R</code>, captura su salida y los incorpora en el informe. Luego, <code>R Markdown</code> llama al programa pandoc (un programa externo que no está relacionado con el <code>R</code>) para convertir el archivo <strong>.md</strong> a una variedad de formatos, como .pdf, .html y .docx.</p>
 
 </div>
 </div>
